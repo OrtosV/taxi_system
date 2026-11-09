@@ -1,0 +1,43 @@
+project:
+  name: "taxi-demand-forecasting"
+  description: "Прогнозирование пространственно-временного спроса на такси"
+  version: "0.1.0"
+  random_seed: 42
+
+data:
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+
+forecast:
+  target: "trip_count"
+  frequency: "1h"
+  horizon: 1
+  spatial_unit: "taxi_zone"
+  timezone: "America/New_York"
+
+sources:
+  taxi:
+    enabled: true
+    name: "NYC TLC Trip Record Data"
+
+  weather:
+    enabled: true
+    name: "Open-Meteo Historical Weather API"
+
+  collisions:
+    enabled: true
+    name: "NYC Traffic Collisions"
+
+  requests_311:
+    enabled: true
+    name: "NYC 311 Service Requests"
+
+modeling:
+  random_seed: 42
+  validation_strategy: "time_series"
+
+  metrics:
+    - MAE
+    - RMSE
+    - WAPE

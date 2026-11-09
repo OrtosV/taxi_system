@@ -46,3 +46,12 @@ logs/*
 # OS
 .DS_Store
 Thumbs.db
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Python type checking
+.mypy_cache/
+.pyright/
