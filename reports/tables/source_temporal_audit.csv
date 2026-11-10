@@ -1,0 +1,5 @@
+﻿source,rows,invalid_datetime,min_datetime,max_datetime,unique_hours,expected_hours_between_bounds,missing_hours,unexpected_hours,missing_zone,unique_zones,duplicate_keys,timezone
+taxi_demand,4614072,0,2024-01-01,2025-12-31 23:00:00,17544,17544,0,0,0,263.0,0,naive
+collisions,159743,0,2024-01-01,2025-12-31 23:00:00,17400,17544,144,0,0,258.0,0,naive
+requests_311,2441805,0,2024-01-01,2025-12-31 23:00:00,17542,17544,2,0,0,262.0,0,naive
+weather,17544,0,2024-01-01,2025-12-31 23:00:00,17544,17544,0,0,0,,0,naive

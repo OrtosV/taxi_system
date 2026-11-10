@@ -1,0 +1,17 @@
+﻿column,missing_count,negative_count,fractional_count,minimum,maximum,mean,dtype_after_conversion
+trip_count,0,0,0,0.0,1300.0,19.4821,int64
+collision_count,0,0,0,0.0,5.0,0.0359,int32
+injured_count,0,0,0,0.0,20.0,0.021,int32
+killed_count,0,0,0,0.0,4.0,0.0001,int32
+pedestrians_injured,0,0,0,0.0,8.0,0.0039,int32
+pedestrians_killed,0,0,0,0.0,4.0,0.0,int32
+cyclists_injured,0,0,0,0.0,3.0,0.002,int32
+cyclists_killed,0,0,0,0.0,1.0,0.0,int32
+motorists_injured,0,0,0,0.0,20.0,0.0142,int32
+motorists_killed,0,0,0,0.0,2.0,0.0,int32
+total_311_count,0,0,0,0.0,338.0,1.5187,int32
+traffic_related_311_count,0,0,0,0.0,56.0,0.3739,int32
+road_condition_311_count,0,0,0,0.0,50.0,0.0461,int32
+urban_activity_311_count,0,0,0,0.0,338.0,0.3461,int32
+residential_environment_311_count,0,0,0,0.0,77.0,0.2989,int32
+described_311_count,0,0,0,0.0,338.0,1.4767,int32

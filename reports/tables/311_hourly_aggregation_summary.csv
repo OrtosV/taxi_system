@@ -1,0 +1,2 @@
+﻿source_rows,invalid_datetime,missing_zone,valid_rows,aggregated_requests,zones,unique_hours,rows_after_aggregation,duplicate_zone_hour,traffic_related_requests,road_condition_requests,urban_activity_requests,residential_environment_requests,requests_with_descriptor
+7111812,0,104268,7007544,7007544,262,17542,2441805,0,1725296,212897,1596974,1379010,6813453
