@@ -55,3 +55,26 @@ htmlcov/
 # Python type checking
 .mypy_cache/
 .pyright/
+
+# Exploratory scripts
+/scripts/01_*.py
+/scripts/02_*.py
+/scripts/03_*.py
+/scripts/04_*.py
+/scripts/05_*.py
+/scripts/06_*.py
+/scripts/08_*.py
+/scripts/10_*.py
+/scripts/11_*.py
+/scripts/12_*.py
+/scripts/13_*.py
+/scripts/14_*.py
+/scripts/15_*.py
+/scripts/16_*.py
+/scripts/17_*.py
+/scripts/22_*.py
+/scripts/23_*.py
+/scripts/24_*.py
+
+# Automated tests
+/tests/
