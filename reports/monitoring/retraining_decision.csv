@@ -1,0 +1,2 @@
+﻿baseline_MAE,baseline_WAPE,MAE_limit,WAPE_limit,significant_data_drift,consecutive_performance_degradation,decision
+4.072391,19.711498,4.68324965,22.668222699999998,True,False,Наблюдение: обнаружен Data Drift

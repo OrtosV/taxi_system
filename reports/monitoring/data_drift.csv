@@ -1,0 +1,13 @@
+﻿feature,period,PSI,status,reference_rows,current_rows
+demand_lag_1h,validation_period_1,0.125348690007433,Умеренное изменение,100000,100000
+demand_lag_1h,validation_period_2,0.09475935379004374,Незначительное изменение,100000,100000
+demand_lag_168h,validation_period_1,0.14157702616896858,Умеренное изменение,100000,100000
+demand_lag_168h,validation_period_2,0.10312554472290346,Умеренное изменение,100000,100000
+temperature_2m_prev_hour,validation_period_1,5.6424762602586815,Существенное изменение,99977,100000
+temperature_2m_prev_hour,validation_period_2,6.628321243121043,Существенное изменение,99977,100000
+precipitation_prev_hour,validation_period_1,0.002729959942820363,Незначительное изменение,99977,100000
+precipitation_prev_hour,validation_period_2,0.023608815710193933,Незначительное изменение,99977,100000
+wind_speed_10m_prev_hour,validation_period_1,0.5727795583080981,Существенное изменение,99977,100000
+wind_speed_10m_prev_hour,validation_period_2,0.7070740764769199,Существенное изменение,99977,100000
+total_311_count_prev_hour,validation_period_1,0.0037464715080140045,Незначительное изменение,100000,100000
+total_311_count_prev_hour,validation_period_2,0.0023549020509590107,Незначительное изменение,100000,100000
