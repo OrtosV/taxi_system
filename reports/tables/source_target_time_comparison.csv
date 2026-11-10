@@ -1,0 +1,5 @@
+﻿source,hours_in_source,hours_in_target,common_hours,only_in_source,missing_from_source
+taxi_demand,17544,17544,17544,0,0
+collisions,17400,17544,17400,0,144
+requests_311,17542,17544,17542,0,2
+weather,17544,17544,17544,0,0

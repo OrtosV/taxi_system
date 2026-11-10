@@ -24,14 +24,67 @@ sources:
   weather:
     enabled: true
     name: "Open-Meteo Historical Weather API"
+    base_url: "https://archive-api.open-meteo.com/v1/archive"
+    latitude: 40.7128
+    longitude: -74.0060
+    start_date: "2024-01-01"
+    end_date: "2025-12-31"
+    timezone: "America/New_York"
+    hourly_variables:
+      - temperature_2m
+      - relative_humidity_2m
+      - precipitation
+      - wind_speed_10m
+      - weather_code
 
   collisions:
     enabled: true
-    name: "NYC Traffic Collisions"
+    name: "NYC Motor Vehicle Collisions - Crashes"
+    base_url: "https://data.cityofnewyork.us/resource/h9gi-nx95.json"
+    start_date: "2024-01-01"
+    end_date: "2025-12-31"
+    page_size: 10000
+    selected_columns:
+      - collision_id
+      - crash_date
+      - crash_time
+      - borough
+      - zip_code
+      - latitude
+      - longitude
+      - on_street_name
+      - number_of_persons_injured
+      - number_of_persons_killed
+      - number_of_pedestrians_injured
+      - number_of_pedestrians_killed
+      - number_of_cyclist_injured
+      - number_of_cyclist_killed
+      - number_of_motorist_injured
+      - number_of_motorist_killed
+      - contributing_factor_vehicle_1
+      - vehicle_type_code1
 
   requests_311:
     enabled: true
-    name: "NYC 311 Service Requests"
+    name: "NYC 311 Service Requests from 2020 to Present"
+    base_url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json"
+    start_date: "2024-01-01"
+    end_date: "2025-12-31"
+    page_size: 10000
+    selected_columns:
+      - unique_key
+      - created_date
+      - agency
+      - complaint_type
+      - descriptor
+      - descriptor_2
+      - location_type
+      - incident_zip
+      - borough
+      - latitude
+      - longitude
+      - open_data_channel_type
+
 
 modeling:
   random_seed: 42
