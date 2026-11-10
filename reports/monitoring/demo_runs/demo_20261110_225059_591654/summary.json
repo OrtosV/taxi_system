@@ -1,0 +1,158 @@
+{
+  "run_id": "demo_20261110_225059_591654",
+  "timestamp": "2026-11-10T22:50:59.591654+00:00",
+  "demo_only": true,
+  "description": "Демонстрация на исторических данных и искусственно смещённых признаках. Не является онлайн-мониторингом.",
+  "data_drift": {
+    "features_checked": 6,
+    "significant_features": [
+      "temperature_2m_prev_hour",
+      "precipitation_prev_hour",
+      "wind_speed_10m_prev_hour",
+      "total_311_count_prev_hour"
+    ],
+    "max_psi": 14.178205193859208,
+    "records": [
+      {
+        "feature": "demand_lag_1h",
+        "PSI": 0.19308803390171028,
+        "status": "Умеренное изменение",
+        "reference_rows": 100000,
+        "shifted_rows": 100000
+      },
+      {
+        "feature": "demand_lag_168h",
+        "PSI": 0.11923350186783162,
+        "status": "Умеренное изменение",
+        "reference_rows": 100000,
+        "shifted_rows": 100000
+      },
+      {
+        "feature": "temperature_2m_prev_hour",
+        "PSI": 11.454094881282645,
+        "status": "Существенное изменение",
+        "reference_rows": 99977,
+        "shifted_rows": 100000
+      },
+      {
+        "feature": "precipitation_prev_hour",
+        "PSI": 14.178205193859208,
+        "status": "Существенное изменение",
+        "reference_rows": 99977,
+        "shifted_rows": 100000
+      },
+      {
+        "feature": "wind_speed_10m_prev_hour",
+        "PSI": 9.434587450994465,
+        "status": "Существенное изменение",
+        "reference_rows": 99977,
+        "shifted_rows": 100000
+      },
+      {
+        "feature": "total_311_count_prev_hour",
+        "PSI": 9.601103213527322,
+        "status": "Существенное изменение",
+        "reference_rows": 100000,
+        "shifted_rows": 100000
+      }
+    ]
+  },
+  "performance_drift": {
+    "baseline_MAE": 4.072391,
+    "baseline_WAPE_percent": 19.711498,
+    "MAE_limit": 4.68324965,
+    "WAPE_limit_percent": 22.668222699999998,
+    "consecutive_performance_degradation": false,
+    "decision": "Ухудшение качества не подтверждено",
+    "monthly_metrics": [
+      {
+        "period": "2025-05",
+        "rows": 20251,
+        "MAE": 4.69289480854766,
+        "MSE": 195.5359459264689,
+        "RMSE": 13.983416818734572,
+        "WAPE_percent": 18.99398073095245,
+        "R2": 0.955440258380695
+      },
+      {
+        "period": "2025-06",
+        "rows": 189360,
+        "MAE": 4.40217953622667,
+        "MSE": 143.69349677597097,
+        "RMSE": 11.987222229356181,
+        "WAPE_percent": 19.283097081613025,
+        "R2": 0.9626445421484426
+      },
+      {
+        "period": "2025-07",
+        "rows": 195672,
+        "MAE": 4.076765089830451,
+        "MSE": 132.55363701087873,
+        "RMSE": 11.513194040355557,
+        "WAPE_percent": 20.459548111271424,
+        "R2": 0.9561298789751351
+      },
+      {
+        "period": "2025-08",
+        "rows": 195672,
+        "MAE": 3.523017444286201,
+        "MSE": 91.9031444950068,
+        "RMSE": 9.586612774854672,
+        "WAPE_percent": 19.2876775735021,
+        "R2": 0.9626313971122414
+      },
+      {
+        "period": "2025-09",
+        "rows": 84423,
+        "MAE": 4.447007109645795,
+        "MSE": 161.74186786357959,
+        "RMSE": 12.717777630686093,
+        "WAPE_percent": 20.145670617905203,
+        "R2": 0.9574505928098546
+      }
+    ]
+  },
+  "model_lifecycle": {
+    "events": [
+      {
+        "stage": "Оценка кандидата на Validation",
+        "action": "candidate_evaluation",
+        "from_version": "1.0.0",
+        "candidate_version": "1.2.0",
+        "approved": true,
+        "reason": "Кандидат улучшил MAE и WAPE на Validation"
+      },
+      {
+        "stage": "Продвижение кандидата",
+        "action": "model_promotion",
+        "from_version": "1.0.0",
+        "to_version": "1.2.0",
+        "reason": "Кандидат прошёл проверку Validation"
+      },
+      {
+        "stage": "Контрольное сравнение Test",
+        "action": "test_comparison",
+        "active_candidate_version": "1.2.0",
+        "reference_version": "1.0.0",
+        "candidate_MAE": 4.3224442081310706,
+        "reference_MAE": 4.201403510566287,
+        "candidate_WAPE_percent": 19.36701844261105,
+        "reference_WAPE_percent": 18.824686995594583,
+        "rollback_required": true,
+        "reason": "Кандидат уступил исходной модели по Test MAE и WAPE"
+      },
+      {
+        "stage": "Откат модели",
+        "action": "model_rollback",
+        "from_version": "1.2.0",
+        "to_version": "1.0.0",
+        "reason": "Демонстрационный откат: кандидат хуже на Test по MAE и WAPE"
+      }
+    ],
+    "initial_version": "1.0.0",
+    "candidate_version": "1.2.0",
+    "final_active_version": "1.0.0",
+    "production_registry_modified": false
+  },
+  "output_directory": "reports\\monitoring\\demo_runs\\demo_20261110_225059_591654"
+}
